@@ -27,7 +27,10 @@ jobs:
       - name: Deploy to Arweave
         run: echo CONFIRM | npm run deploy | tee deploy_output.txt
 
-      # Your new step to update the README
+        
+      - name: Set Execute Permission for Script
+        run: chmod +x ./update_readme.sh
+
       - name: Update README with Arweave Link
         run: ./update_readme.sh
         env:
