@@ -33,14 +33,14 @@ jobs:
 
       - name: Update README with Arweave Link
         run: ./update_readme.sh
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
 
-      # Your step to commit and push changes
-      - name: Commit and Push Updated README
+      - name: Configure Git
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+
+      - name: Commit and Push Updated README
+        run: |
           git add README.md
           git commit -m "Update README with Arweave deployment link"
-          git push
+          git -c http.extraHeader="AUTHORIZATION: basic $(echo -n x-access-token:${{ secrets.MY_GITHUB_PAT }} | base64)" push
