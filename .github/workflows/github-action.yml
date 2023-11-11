@@ -3,7 +3,7 @@ name: Deploy to Arweave
 on:
   push:
     branches:
-      - main  # Trigger the deployment when there's a push to the main branch
+      - main # Trigger the deployment when there's a push to the main branch
 
 jobs:
   build-and-deploy:
@@ -16,7 +16,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18.18.0'  # Using Node.js version 18.18.0
+          node-version: "18.18.0" # Using Node.js version 18.18.0
 
       - name: Install Dependencies
         run: npm install
@@ -25,7 +25,19 @@ jobs:
         run: echo '${{ secrets.ARWEAVE_WALLET_ENCODED }}' | base64 -d > wallet.json
 
       - name: Deploy to Arweave
-        run: echo CONFIRM | npm run deploy
+        run: echo CONFIRM | npm run deploy | tee deploy_output.txt
 
-      - name: Remove Arweave Wallet File
-        run: rm wallet.json
+      # Your new step to update the README
+      - name: Update README with Arweave Link
+        run: ./path/to/update_readme.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Your step to commit and push changes
+      - name: Commit and Push Updated README
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git commit -m "Update README with Arweave deployment link"
+          git push
