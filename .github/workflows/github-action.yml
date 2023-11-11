@@ -43,4 +43,4 @@ jobs:
         run: |
           git add README.md
           git commit -m "Update README with Arweave deployment link"
-          git -c http.extraHeader="AUTHORIZATION: basic $(echo -n x-access-token:${{ secrets.MY_GITHUB_PAT }} | base64)" push
+          git -c http.extraHeader="AUTHORIZATION: basic $(echo -n x-access-token:${{ secrets.TOKEN }} | base64)" push
