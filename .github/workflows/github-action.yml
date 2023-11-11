@@ -29,7 +29,7 @@ jobs:
 
       # Your new step to update the README
       - name: Update README with Arweave Link
-        run: ./path/to/update_readme.sh
+        run: ./update_readme.sh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
