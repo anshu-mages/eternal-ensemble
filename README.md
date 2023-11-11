@@ -2,6 +2,11 @@
 
 Hello there, 🚀 fellow developer! Welcome to *Eternal-Ensable* - my special project crafted for the Arweave Challenge. I'm super excited 😊 to share this journey with you. Let's dive into this wonderful world of permaweb, where we defy the norms of data persistence! 🛸
 
+## Deployment
+
+This project is deployed on Arweave. You can access the deployed version here: [Arweave Deployment](ARWEAVE_DEPLOYMENT_LINK)
+
+
 ## 📖 Introduction
 This isn't just a repository; it's a showcase 🎨 of passion and skills in the Arweave ecosystem. My mission? To impress in the Dev Challenge: Choose Your Track & Impress! 🛠️ Under Track 1, I've built a 2-page app that's not just functional but also a treat to the eyes. 🌈
 
