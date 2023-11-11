@@ -27,14 +27,14 @@ jobs:
       - name: Deploy to Arweave
         run: echo CONFIRM | npm run deploy | tee deploy_output.txt
 
-        
+
       - name: Set Execute Permission for Script
         run: chmod +x ./update_readme.sh
 
       - name: Update README with Arweave Link
         run: ./update_readme.sh
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
 
       # Your step to commit and push changes
       - name: Commit and Push Updated README
