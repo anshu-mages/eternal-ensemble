@@ -3,5 +3,10 @@
 # Extract the link
 link=$(grep -o 'https://arweave.net/[a-zA-Z0-9_\-]*' deploy_output.txt)
 
-# Replace the link in README.md
-sed -i "s|\(Current deployment: \[Arweave Deployment\](\).*|\1$link)|" README.md
+# Use GitHub API to update the repository's website field
+curl \
+  -X PATCH \
+  -H "Authorization: token $TOKEN" \
+  -H "Content-Type: application/json" \
+  -d "{\"homepage\":\"$link\"}" \
+  https://api.github.com/repos/symaticvisuals/eternal-ensemble

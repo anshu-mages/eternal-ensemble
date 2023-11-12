@@ -2,9 +2,6 @@
 
 Hello there, 🚀 fellow developer! Welcome to *Eternal-Ensable* - my special project crafted for the Arweave Challenge. I'm super excited 😊 to share this journey with you. Let's dive into this wonderful world of permaweb, where we defy the norms of data persistence! 🛸
 
-## Deployment
-
-Current deployment: [Arweave Deployment](ARWEAVE_DEPLOYMENT_LINK)
 
 ## 📖 Introduction
 
