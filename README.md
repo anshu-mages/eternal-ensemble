@@ -4,7 +4,7 @@ Hello there, 🚀 fellow developer! Welcome to *Eternal-Ensable* - my special pr
 
 ## Deployment
 
-Current deployment: [Arweave Deployment](https://arweave.net/reuGaMp83CawtwJ4gOTckje9cSNwBcIFUUW92SsGQIE)
+Current deployment: [Arweave Deployment]()
 
 ## 📖 Introduction
 
