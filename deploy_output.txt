@@ -18,21 +18,21 @@ computing gzip size...
 [2mdist/[22m[2massets/[22m[36mindex-dee38d41.js           [39m[1m[33m  937.59 kB[39m[22m[2m │ gzip: 268.92 kB[22m
 [2mdist/[22m[2massets/[22m[36mweb.bundle.min-24f4cff4.js  [39m[1m[33m1,559.37 kB[39m[22m[2m │ gzip: 488.12 kB[22m
 [2mdist/[22m[2massets/[22m[36mindex-535428b9.js           [39m[1m[33m3,226.94 kB[39m[22m[2m │ gzip: 934.13 kB[22m
-[32m✓ built in 23.97s[39m
+[32m✓ built in 23.63s[39m
 
 Preparing files from /home/runner/work/eternal-ensemble/eternal-ensemble/dist
 
 ID                                          Size         Fee             Type                 Path
-ME0mzEyfyHpdsfa8U-RgKf31ekA46R0nEPvc61VA240 166.91 kB    0.000212017846  text/css             assets/index-2b7253cd.css
-vODXzvJ4AKn8O_xLZciYT40W8g2tspC0XpaEV1m3dRQ 327.93 kB    0.000421470902  application/javascript assets/web.bundle.min-1f3f4cff.js
-A2z36q-P9WDXja5WxR4LZqnQcLwqWG4mp74OmrOrkq4 478.00 Bytes 0.000212017846  application/javascript assets/index-cdad4d4c.js
-_5McbLfm6Os29EIs8U1VPbc0B3hms61_zSECCpw6qIg 1.05 kB      0.000212017846  text/html            index.html*
-_VexCuT_adwkejPZW_gfqAhmyPVXCVwE6hMV3AJ9W5s 1.46 kB      0.000212017846  image/svg+xml        vite.svg
-tDkkEc_ZNnYChsKaqU3HuUFei3NFxVtalOY2Bq1RUp4 915.63 kB    0.000840377014  application/javascript assets/index-dee38d41.js
-0aSjO0Q9myKe-BdVARBK7JxB5B10stcGd7z4ZyWUYT8 1.49 MB      0.001259283126  application/javascript assets/web.bundle.min-24f4cff4.js
-sI4nfz7mcmj9rARIWSkBTz2f9-p2wB9cCnNNA7ugeAU 3.13 MB      0.002725454518  application/javascript assets/index-535428b9.js
+YjUzu91d8GM4emPBbwPDk58jEr3BJ8jBHesacoTHvDg 166.91 kB    0.000212017846  text/css             assets/index-2b7253cd.css
+2REWp7B8X2N6cCBRlU-ZMf6ujcOHSz1ptfy9MzP5stw 478.00 Bytes 0.000212017846  application/javascript assets/index-cdad4d4c.js
+in7ough2azqMy3OdEYtbb_vrB0NrMbh3YRdJOn7ilo8 327.93 kB    0.000421470902  application/javascript assets/web.bundle.min-1f3f4cff.js
+Ks1JOdyy0f-zhSc6bOlwcL_oD0iPwEXTT3H5U3tqUnU 1.05 kB      0.000212017846  text/html            index.html*
+lTp61rADBURXtBIORM5zDXjuQ-oTQLNbmuijdoaYio0 1.46 kB      0.000212017846  image/svg+xml        vite.svg
+72nEa9LdfFOEukQlr6Mv7PzuwZQkUWRxCjjraG27NoY 915.63 kB    0.000840377014  application/javascript assets/index-dee38d41.js
+fa_NvSb_8wo6q4H6chL2OUgCwjhhpDkG7MSx_q8e8U8 1.49 MB      0.001259283126  application/javascript assets/web.bundle.min-24f4cff4.js
+zPczX--Pe72e-_yMXgzbWA_bvgxqT1BT0zNkcfWf4NM 3.13 MB      0.002725454518  application/javascript assets/index-535428b9.js
 
-GtXM7w-aAStFXTjHkVJI0RwplwSh1NkOR01ksYn0T58 715.00 Bytes 0.000212017846  application/x.arweave-manifest+json
+1urv9eVgnLjSvhFQOB2FLGMah0YBoYo7W4bk8B5xrVg 715.00 Bytes 0.000212017846  application/x.arweave-manifest+json
 
 Summary
 
@@ -44,8 +44,8 @@ Total price: 0.006306674790 AR
 Wallet
 
 Address: J-x6qHeWPYuzbi2pt0HtPw5KxitNwRU2I3hdUWJ9DAo
-Current balance: 0.033898431618 AR
-Balance after uploading: 0.027591756828 AR
+Current balance: 0.027591756828 AR
+Balance after uploading: 0.021285082038 AR
 
 Carefully check the above details are correct, then Type CONFIRM to complete this upload 
 Uploading...
@@ -54,4 +54,4 @@ Uploading...
 Your files are being deployed! 🚀
 Once your files are mined into blocks they'll be available on the following URL
 
-https://arweave.net/GtXM7w-aAStFXTjHkVJI0RwplwSh1NkOR01ksYn0T58
+https://arweave.net/1urv9eVgnLjSvhFQOB2FLGMah0YBoYo7W4bk8B5xrVg
