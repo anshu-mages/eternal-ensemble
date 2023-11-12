@@ -36,8 +36,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "symaticvisuals02@gmail.com"
+          git config --local user.name "DeepanshuGoel-Action"
 
       - name: Commit and Push Updated README
         run: |
