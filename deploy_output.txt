@@ -18,13 +18,13 @@ computing gzip size...
 [2mdist/[22m[2massets/[22m[36mindex-dee38d41.js           [39m[1m[33m  937.59 kB[39m[22m[2m │ gzip: 268.92 kB[22m
 [2mdist/[22m[2massets/[22m[36mweb.bundle.min-24f4cff4.js  [39m[1m[33m1,559.37 kB[39m[22m[2m │ gzip: 488.12 kB[22m
 [2mdist/[22m[2massets/[22m[36mindex-535428b9.js           [39m[1m[33m3,226.94 kB[39m[22m[2m │ gzip: 934.13 kB[22m
-[32m✓ built in 38.69s[39m
+[32m✓ built in 24.14s[39m
 
 Preparing files from /home/runner/work/eternal-ensemble/eternal-ensemble/dist
 
 ID                                          Size         Fee             Type                 Path
-nrGiJeiPomuQwUEY2mNCSuwgqxEJ5vh4hKkRMRUmaxQ 478.00 Bytes 0.000212017846  application/javascript assets/index-cdad4d4c.js
 RdwUgcmyM06kCYk7VQSpKHX-Icz0_HQxFX2PQpYMmNE 166.91 kB    0.000212017846  text/css             assets/index-2b7253cd.css
+nrGiJeiPomuQwUEY2mNCSuwgqxEJ5vh4hKkRMRUmaxQ 478.00 Bytes 0.000212017846  application/javascript assets/index-cdad4d4c.js
 _lpV7A6lqVGvB3quy3yZK164fLLen_KLLU9Yahf6KNg 327.93 kB    0.000421470902  application/javascript assets/web.bundle.min-1f3f4cff.js
 P6CkWCkuK2kT1qulJ30eV-gUFzV3_ABrgDqaHPWR_9Q 1.05 kB      0.000212017846  text/html            index.html*
 -z6nnUT5skWjt_neYSkEaT2bLviJyXgsnwppCFg07mM 1.46 kB      0.000212017846  image/svg+xml        vite.svg
@@ -32,7 +32,7 @@ MQOsBAfbzoKjgjzdVSr03G5h01qAwdTYLY0D3Hvw_Do 915.63 kB    0.000840377014  applica
 NyeP_xKnPGF8eApYSSD-RPBi9xYjE3WdE5AklAkZxj4 3.13 MB      0.002725454518  application/javascript assets/index-535428b9.js
 5VDiv2MDDi8awnQXo7mDuGcppHOMrbLyPDi0r5t8_Qw 1.49 MB      0.001259283126  application/javascript assets/web.bundle.min-24f4cff4.js
 
-eIJqUmHG49zois0sc9oCbF4yMpTMj-8ub-VD6fYM2xc 715.00 Bytes 0.000212017846  application/x.arweave-manifest+json
+U4hwOThMXZNS2_pVZiHvLemJHn9CGxI0liuNy02TgM4 715.00 Bytes 0.000212017846  application/x.arweave-manifest+json
 
 Summary
 
@@ -54,4 +54,4 @@ Uploading...
 Your files are being deployed! 🚀
 Once your files are mined into blocks they'll be available on the following URL
 
-https://arweave.net/eIJqUmHG49zois0sc9oCbF4yMpTMj-8ub-VD6fYM2xc
+https://arweave.net/U4hwOThMXZNS2_pVZiHvLemJHn9CGxI0liuNy02TgM4
