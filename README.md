@@ -4,7 +4,7 @@ Hello there, 🚀 fellow developer! Welcome to *Eternal-Ensable* - my special pr
 
 ## Deployment
 
-This project is deployed on Arweave. You can access the deployed version here: [Arweave Deployment](https://arweave.net/Evm0DNSB8cY7E3L9RilZU-bAYIHm-EvXcSX9OCZXLtM)
+Current deployment: [Arweave Deployment](ARWEAVE_DEPLOYMENT_LINK)
 
 ## 📖 Introduction
 
