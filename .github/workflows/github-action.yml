@@ -34,16 +34,23 @@ jobs:
       - name: Update README with Arweave Link
         run: ./update_readme.sh
 
+      - name: Set up SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
       - name: Configure Git
         run: |
           git config --local user.email "symaticvisuals02@gmail.com"
           git config --local user.name "DeepanshuGoel-Action"
 
-      - name: Commit and Push Updated README
-        env:
-          MY_PAT: ${{ secrets.TOKEN }}
+      - name: Commit and Push Updated README via SSH
         run: |
-          echo ${{ secrets.TOKEN }}
           git add README.md
           git commit -m "Update README with Arweave deployment link"
-          git push https://x-access-token:${MY_PAT}@github.com/symaticvisuals/eternal-ensemble.git
+          git push git@github.com:symaticvisuals/eternal-ensemble.git main
