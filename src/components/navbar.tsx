@@ -4,6 +4,7 @@ import {
   NavbarContent,
   NavbarItem,
   Input,
+  Button,
 } from "@nextui-org/react";
 import ArweaveConnectButton from "./arweave-connect";
 import SearchContext from "../contexts/searchContext";
@@ -22,22 +23,26 @@ export default function NavbarContainer() {
 
   return (
     <Navbar maxWidth="full" className="container mx-auto" height={"75px"}>
-       
-      <NavbarBrand onClick={()=>{
-        window.location.href = "/"
-      }}>
-        <p className="font-bold text-inherit">Eternal Ensable</p>
-      </NavbarBrand>
-        
-      <NavbarContent className="hidden sm:flex gap-4">
+      <NavbarBrand className="flex gap-3 items-center">
+        <Button
+          color="default"
+          className="font-bold text-inherit bg-transparent"
+          onClick={() => {
+            window.location.href = "/";
+          }}
+        >
+          Eternal Ensable
+        </Button>
         <Input
           placeholder="Search"
-          width="300px"
+          width="500px"
           size="sm"
           onChange={handleSearch}
           value={search}
         />
-      </NavbarContent>
+      </NavbarBrand>
+
+     
       <NavbarContent justify="end">
         <NavbarItem>
           <ArweaveConnectButton />
@@ -46,3 +51,4 @@ export default function NavbarContainer() {
     </Navbar>
   );
 }
+ 

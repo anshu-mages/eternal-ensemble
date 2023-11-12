@@ -16,6 +16,13 @@ function App() {
           <div className="">
             <RoutesContainer />
           </div>
+          {/* <div className="mt-5 bg-zinc-900">
+            <div className=" container mx-auto py-4">
+              <p>
+                Created By Deepanshu Goel
+                </p>
+            </div>
+          </div> */}
         </SearchContext.Provider>
       </NextUIProvider>
     </div>

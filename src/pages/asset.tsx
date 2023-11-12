@@ -135,7 +135,7 @@ function AssetPage() {
   }
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto ">
       <Button
         color="success"
         className="mt-5 "
@@ -148,8 +148,8 @@ function AssetPage() {
         </div>
       </Button>
       <div className="flex items-center mt-16">
-        <div className="grid grid-cols-3 mt-5 gap-4 items-center ">
-          <div className=" col-span-2">
+        <div className="grid grid-cols-5 mt-5 gap-4 items-center ">
+          <div className=" col-span-3">
             <h1 className="text-2xl font-bold text-secondary-800 capitalize">
               {data?.Title}
             </h1>
@@ -216,7 +216,7 @@ function AssetPage() {
           </div>
           <img
             alt="Woman listing to music"
-            className="  object-cover h-[600px] w-full object-top rounded-xl"
+            className="col-span-2  object-cover h-[600px] w-full object-top rounded-xl"
             src={`https://arweave.net/${id}`}
           />
         </div>

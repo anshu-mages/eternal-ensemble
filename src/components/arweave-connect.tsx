@@ -1,6 +1,7 @@
 import { Button, Chip } from "@nextui-org/react";
 import React, { useState, useEffect } from "react";
 import { getBalance } from "arweavekit/wallet";
+import { BsGithub } from "react-icons/bs";
 
 const ArweaveConnectButton: React.FC = () => {
   const [walletAddress, setWalletAddress] = useState<string | null>(null);
@@ -56,9 +57,16 @@ const ArweaveConnectButton: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="flex gap-3 items-center">
+      <Button color="default"  variant="light" className="px-0 py-0 -mr-4" onClick={() => {
+        // open github repo in new tab
+        window.open("https://github.com/symaticvisuals/eternal-ensemble" , "_blank");
+      }
+    }>
+      <BsGithub className="text-2xl" />
+      </Button>
       {walletAddress ? (
-        <Button color="default"   onClick={disconnectWallet}>
+        <Button color="default" onClick={disconnectWallet}>
           {" "}
           {walletAddress}
           <Chip color="primary">{+balance / Math.pow(10, 12)} AR</Chip>
