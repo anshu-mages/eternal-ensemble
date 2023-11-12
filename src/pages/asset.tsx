@@ -1,8 +1,9 @@
-import { Button, Card, CardBody, CardHeader, Chip } from "@nextui-org/react";
+import { Button,  Chip } from "@nextui-org/react";
 import { queryGQL } from "arweavekit";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { IoArrowBackOutline } from "react-icons/io5";
+
 
 export interface Tag {
   name: string;
@@ -18,7 +19,10 @@ export interface RootObject {
 }
 
 function AssetPage() {
-  const { id } = useParams<{ id: string }>();
+  const { id } = useParams<{
+    id: string;
+    collectionId: string;
+  }>();
   const [assetData, setAssetData] = useState<RootObject>(null);
   const [data, setData] = useState(null);
 
@@ -97,6 +101,7 @@ function AssetPage() {
   useEffect(() => {
     async function fetchAssetData() {
       const transactionDetails = await fetchArweaveTransactionDetails(id);
+      console.log(transactionDetails);
       setAssetData(transactionDetails as unknown as RootObject);
     }
     fetchAssetData();
@@ -131,51 +136,89 @@ function AssetPage() {
 
   return (
     <div className="container mx-auto">
-      <Button color="success" className="mt-5 " onClick={
-        ()=>{
-          router("/")
-        }
-      }>
+      <Button
+        color="success"
+        className="mt-5 "
+        onClick={() => {
+          router("/");
+        }}
+      >
         <div className="flex items-center gap-2">
           <IoArrowBackOutline /> Back to Home
         </div>
       </Button>
-      <div className="grid grid-cols-3 mt-5 gap-4 ">
-        <img
-          alt="Woman listing to music"
-          className="  object-cover h-[600px] w-full object-top rounded-xl"
-          src={`https://arweave.net/${id}`}
-        />
+      <div className="flex items-center mt-16">
+        <div className="grid grid-cols-3 mt-5 gap-4 items-center ">
+          <div className=" col-span-2">
+            <h1 className="text-2xl font-bold text-secondary-800 capitalize">
+              {data?.Title}
+            </h1>
+            <p className="text-default-500 mt-1 text-lg">{data?.Description}</p>
+            <div className=" flex gap-2 mt-2">
+              {data &&
+                extractTopicKeyValuePairs(data).map((pair, i) => (
+                  <Chip color="secondary" key={i}>
+                    {pair.value}
+                  </Chip>
+                ))}
+            </div>
 
-        <div className=" col-span-2">
-          <Card className="border-none">
-            <CardBody>
-              <h1 className="text-2xl font-bold text-secondary-800 capitalize">
-                {data?.Title}
-              </h1>
-              <p className="text-default-500 mt-1 text-lg">
-                {data?.Description}
-              </p>
-              <div className=" flex gap-2 mt-2">
+            <div className="grid grid-cols-2">
+              <div className="flex flex-col gap-2 mt-5">
+                {data?.Creator && (
+                  <Button
+                    color="default"
+                    onClick={() => {
+                      //open in new tab
+                      window.open(
+                        `https://viewblock.io/arweave/address/${data?.Creator}`,
+                        "_blank"
+                      );
+                    }}
+                  >
+                    Created By - {data?.Creator}
+                  </Button>
+                )}
                 {data &&
-                  extractTopicKeyValuePairs(data).map((pair) => (
-                    <Chip color="secondary">{pair.value}</Chip>
-                  ))}
+                  Object.keys(data).includes("Init-State") &&
+                  data["Init-State"]?.firstOwner && (
+                    <Button
+                      color="default"
+                      onClick={() => {
+                        //open in new tab
+                        window.open(
+                          `https://viewblock.io/arweave/address/${
+                            JSON.parse(data["Init-State"]).firstOwner
+                          }`,
+                          "_blank"
+                        );
+                      }}
+                    >
+                      First Owner - {JSON.parse(data["Init-State"]).firstOwner}
+                    </Button>
+                  )}
+                {data && (
+                  <Button
+                    color="success"
+                    onClick={() => {
+                      //open in new tab
+                      window.open(
+                        `https://viewblock.io/arweave/tx/${id}`,
+                        "_blank"
+                      );
+                    }}
+                  >
+                    License - {data["License"]}
+                  </Button>
+                )}
               </div>
-            </CardBody>
-          </Card>
-          <Card className="border-none mt-5">
-            <CardHeader className="flex flex-col items-start gap-3">
-              {data?.Creator && (
-                <Chip color="default">Created By - {data?.Creator}</Chip>
-              )}
-              {data && Object.keys(data).includes("Init-State") && (
-                <Chip color="default">
-                  First Owner - {JSON.parse(data["Init-State"]).firstOwner}
-                </Chip>
-              )}
-            </CardHeader>
-          </Card>
+            </div>
+          </div>
+          <img
+            alt="Woman listing to music"
+            className="  object-cover h-[600px] w-full object-top rounded-xl"
+            src={`https://arweave.net/${id}`}
+          />
         </div>
       </div>
     </div>

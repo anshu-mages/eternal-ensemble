@@ -31,7 +31,11 @@ async function fetchArweaveTransactionDetails(txId:string) {
 }
 
 
-export default function Cards(){
+export default function Cards({
+  collectionId
+}:{
+  collectionId:string
+}){
      const [arweaveData, setArweaveData] = useState({
        transactionIds: [],
        transactionDetails: [],
@@ -42,10 +46,11 @@ export default function Cards(){
 
      // Fetch initial transaction IDs
      useEffect(() => {
+      if(!collectionId) return;
        async function fetchInitialTransactionIds() {
          try {
            const response = await fetch(
-             "https://arweave.net/qdpvt3ZKMTqOpuqYSqPhEyRrQMCLbfl_aa33acDYnFQ"
+             `https://arweave.net/${collectionId}`
            );
            const jsonData = await response.json();
            setArweaveData((prevData) => ({
@@ -60,7 +65,7 @@ export default function Cards(){
          }
        }
        fetchInitialTransactionIds();
-     }, []);
+     }, [collectionId]);
 
      // Fetch transaction details
      useEffect(() => {
@@ -122,6 +127,7 @@ export default function Cards(){
          <div className="grid grid-cols-5 gap-4">
            {filteredTransactionIds.map((txId, index) => (
              <AtomicAssetCard
+             collectionId={collectionId}
                key={txId}
                txId={txId}
                index={index}

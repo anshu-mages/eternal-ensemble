@@ -11,7 +11,7 @@ function RoutesContainer() {
     <HashRouter>
       <Routes>
         <Route path={"/"} element={<Home />} />
-        <Route path={"/:id"} element={<AssetPage />} />
+        <Route path={"/:collectionId/:id"} element={<AssetPage />} />
       </Routes>
     </HashRouter>
    

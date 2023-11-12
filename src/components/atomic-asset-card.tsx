@@ -6,6 +6,7 @@ function AtomicAssetCard({
     txId,
     index,
     arweaveData,
+    collectionId,
 }) {
 
     const router = useNavigate();
@@ -15,7 +16,7 @@ function AtomicAssetCard({
       shadow="sm"
       key={index}
       isPressable
-      onPress={() => router(`/${txId}`)}
+      onPress={() => router(`/${collectionId}/${txId}`)}
     >
       <CardBody className="overflow-visible p-0">
         <Image
