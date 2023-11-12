@@ -23,16 +23,16 @@ computing gzip size...
 Preparing files from /home/runner/work/eternal-ensemble/eternal-ensemble/dist
 
 ID                                          Size         Fee             Type                 Path
-RdwUgcmyM06kCYk7VQSpKHX-Icz0_HQxFX2PQpYMmNE 166.91 kB    0.000212017846  text/css             assets/index-2b7253cd.css
-nrGiJeiPomuQwUEY2mNCSuwgqxEJ5vh4hKkRMRUmaxQ 478.00 Bytes 0.000212017846  application/javascript assets/index-cdad4d4c.js
-_lpV7A6lqVGvB3quy3yZK164fLLen_KLLU9Yahf6KNg 327.93 kB    0.000421470902  application/javascript assets/web.bundle.min-1f3f4cff.js
-P6CkWCkuK2kT1qulJ30eV-gUFzV3_ABrgDqaHPWR_9Q 1.05 kB      0.000212017846  text/html            index.html*
--z6nnUT5skWjt_neYSkEaT2bLviJyXgsnwppCFg07mM 1.46 kB      0.000212017846  image/svg+xml        vite.svg
-MQOsBAfbzoKjgjzdVSr03G5h01qAwdTYLY0D3Hvw_Do 915.63 kB    0.000840377014  application/javascript assets/index-dee38d41.js
-NyeP_xKnPGF8eApYSSD-RPBi9xYjE3WdE5AklAkZxj4 3.13 MB      0.002725454518  application/javascript assets/index-535428b9.js
-5VDiv2MDDi8awnQXo7mDuGcppHOMrbLyPDi0r5t8_Qw 1.49 MB      0.001259283126  application/javascript assets/web.bundle.min-24f4cff4.js
+u_fNtln7dEPZr5sYgL2K17KbjNAD5rV9K-wnooEw4XA 166.91 kB    0.000212017846  text/css             assets/index-2b7253cd.css
+e4XmHlfQHxWadtysv3EzAUagyMa5QJ9adKGXwxs5-HI 327.93 kB    0.000421470902  application/javascript assets/web.bundle.min-1f3f4cff.js
+03LWQEvPJp4pqR1uxk2u12YHqMebyDrsqlUG4AZ0SxM 1.05 kB      0.000212017846  text/html            index.html*
+YxgLwyLTZXIfYP5RUycqgLsZy7DY5Y599KIcJWSY4_c 1.46 kB      0.000212017846  image/svg+xml        vite.svg
+MQZKopvFKGdoPQ9qvhe03qyiOHAmM37E9M8SjFg3Hac 915.63 kB    0.000840377014  application/javascript assets/index-dee38d41.js
+uH5fP0G0KVXGI8a0TXVi7PtjSYqr50RNQxycUE2Vt1A 478.00 Bytes 0.000212017846  application/javascript assets/index-cdad4d4c.js
+Nv9NbT5jtM-PVT67LfnNU8owIu078j7XMJloJBXNHrg 1.49 MB      0.001259283126  application/javascript assets/web.bundle.min-24f4cff4.js
+P75AiE1tjVJp77TTJQjD5-hIV2d3ew7zg_fnpFkuUD8 3.13 MB      0.002725454518  application/javascript assets/index-535428b9.js
 
-U4hwOThMXZNS2_pVZiHvLemJHn9CGxI0liuNy02TgM4 715.00 Bytes 0.000212017846  application/x.arweave-manifest+json
+wDap5u_r7KtUEBEZEAh95iuyzkphFwYjFKNKn6Zfso4 715.00 Bytes 0.000212017846  application/x.arweave-manifest+json
 
 Summary
 
@@ -44,8 +44,8 @@ Total price: 0.006306674790 AR
 Wallet
 
 Address: J-x6qHeWPYuzbi2pt0HtPw5KxitNwRU2I3hdUWJ9DAo
-Current balance: 0.021285082038 AR
-Balance after uploading: 0.014978407248 AR
+Current balance: 0.008459714612 AR
+Balance after uploading: 0.002153039822 AR
 
 Carefully check the above details are correct, then Type CONFIRM to complete this upload 
 Uploading...
@@ -54,4 +54,4 @@ Uploading...
 Your files are being deployed! 🚀
 Once your files are mined into blocks they'll be available on the following URL
 
-https://arweave.net/U4hwOThMXZNS2_pVZiHvLemJHn9CGxI0liuNy02TgM4
+https://arweave.net/wDap5u_r7KtUEBEZEAh95iuyzkphFwYjFKNKn6Zfso4
