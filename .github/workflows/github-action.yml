@@ -24,15 +24,15 @@ jobs:
       - name: Decode Arweave Wallet File
         run: echo '${{ secrets.ARWEAVE_WALLET_ENCODED }}' | base64 -d > wallet.json
 
-      # - name: Deploy to Arweave
-      #   run: echo CONFIRM | npm run deploy | tee deploy_output.txt
+      - name: Deploy to Arweave
+        run: echo CONFIRM | npm run deploy | tee deploy_output.txt
 
 
-      # - name: Set Execute Permission for Script
-      #   run: chmod +x ./update_readme.sh
+      - name: Set Execute Permission for Script
+        run: chmod +x ./update_readme.sh
 
-      # - name: Update README with Arweave Link
-      #   run: ./update_readme.sh
+      - name: Update README with Arweave Link
+        run: ./update_readme.sh
 
       - name: Configure Git
         run: |
@@ -40,8 +40,10 @@ jobs:
           git config --local user.name "DeepanshuGoel-Action"
 
       - name: Commit and Push Updated README
+        env:
+          MY_PAT: ${{ secrets.TOKEN }}
         run: |
           echo ${{ secrets.TOKEN }}
           git add README.md
           git commit -m "Update README with Arweave deployment link"
-          git -c http.extraHeader="AUTHORIZATION: basic $(echo -n x-access-token:${{ secrets.TOKEN }} | base64)" push
+          git push https://x-access-token:${MY_PAT}@github.com/symaticvisuals/eternal-ensemble.git
